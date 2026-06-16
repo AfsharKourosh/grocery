@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:grocery/core/utils/app_constants.dart';
+import 'package:grocery/config/theme/app_colors.dart';
 import 'package:grocery/core/utils/app_images.dart';
 import 'package:grocery/src/onBoarding/onboarding_screen.dart';
 
