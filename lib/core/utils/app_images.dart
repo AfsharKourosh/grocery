@@ -4,6 +4,5 @@ class AppImages {
   static const dirinks = 'assets/images/dirinks.png';
   static const fruits = 'assets/images/fruits.png';
   static const camera = 'assets/images/camera.png';
-    static const mic = 'assets/images/microphone.png';
-
+  static const mic = 'assets/images/microphone.png';
 }
