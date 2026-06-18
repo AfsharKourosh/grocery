@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:grocery/src/permission/camera_permission_screen.dart';
 import 'package:grocery/src/splash/splash_screen.dart';
 
 class GroceryApp extends StatelessWidget {
@@ -10,7 +9,9 @@ class GroceryApp extends StatelessWidget {
     return MaterialApp(debugShowCheckedModeBanner: false,
       // title: 'Flutter Demo',
       // theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      home: CameraPermissionScreen(),
+      home: SplashScreen(),    );
+  }
+}
       //  Scaffold(
       //   appBar: AppBar(
       //     backgroundColor: Theme.of(context).colorScheme.inversePrimary,
@@ -35,6 +36,4 @@ class GroceryApp extends StatelessWidget {
       //     child: const Icon(Icons.add),
       //   ),
       // ),
-    );
-  }
-}
+
