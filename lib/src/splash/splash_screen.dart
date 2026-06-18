@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:grocery/config/theme/app_colors.dart';
 import 'package:grocery/core/storage/app_storage.dart';
 import 'package:grocery/core/utils/app_images.dart';
-import 'package:grocery/src/onBoarding/presentation/page/onboarding_screen.dart';
-import 'package:grocery/src/permission/presentation/page/camera_permission_screen.dart';
-import 'package:grocery/src/permission/presentation/page/microphone_permission_screen.dart';
+import 'package:grocery/src/login/login_screen.dart';
+import 'package:grocery/src/onBoarding/presentation/screens/onboarding_screen.dart';
+import 'package:grocery/src/permission/presentation/screens/camera_permission_screen.dart';
+import 'package:grocery/src/permission/presentation/screens/microphone_permission_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -36,11 +37,17 @@ class _SplashScreenState extends State<SplashScreen> {
         context,
         MaterialPageRoute(builder: (_) => const MicrophonePermissionScreen()),
       );
+    } else if (!AppStorage.onboardingDone) {
+      // permissions done → onboarding
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (_) => OnboardingScreen()),
+      );
     } else {
       // Both granted → go to onboarding
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (_) => OnboardingScreen()),
+        MaterialPageRoute(builder: (_) => MyWidget()),
       );
     }
   }
