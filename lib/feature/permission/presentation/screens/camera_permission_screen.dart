@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:grocery/config/theme/app_colors.dart';
 import 'package:grocery/core/storage/app_storage.dart';
-import 'package:grocery/core/utils/app_images.dart';
-import 'package:grocery/src/permission/presentation/screens/microphone_permission_screen.dart';
+import 'package:grocery/core/utils/app_constants.dart';
+import 'package:grocery/feature/permission/presentation/screens/microphone_permission_screen.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 class CameraPermissionScreen extends StatefulWidget {

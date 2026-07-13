@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grocery/core/storage/app_storage.dart';
-import 'package:grocery/src/login/login_screen.dart';
-import 'package:grocery/src/onBoarding/presentation/widgets/onboarding_page_view.dart';
+import 'package:grocery/feature/login/login_screen.dart';
+import 'package:grocery/feature/onBoarding/presentation/widgets/onboarding_page_view.dart';
 
 class OnboardingBottom extends StatelessWidget {
   final int currentPage;

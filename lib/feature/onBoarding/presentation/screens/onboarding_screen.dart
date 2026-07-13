@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:grocery/src/onBoarding/presentation/widgets/onboarding_top.dart';
-import 'package:grocery/src/onBoarding/presentation/widgets/onboarding_bottom.dart';
-import 'package:grocery/src/onBoarding/presentation/widgets/onboarding_page_view.dart';
+import 'package:grocery/feature/onBoarding/presentation/widgets/onboarding_top.dart';
+import 'package:grocery/feature/onBoarding/presentation/widgets/onboarding_bottom.dart';
+import 'package:grocery/feature/onBoarding/presentation/widgets/onboarding_page_view.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});

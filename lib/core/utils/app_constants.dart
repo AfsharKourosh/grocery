@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class AppImages {
   static const logo = 'assets/images/logo.png';
   static const details = 'assets/images/details.png';
@@ -5,4 +7,7 @@ class AppImages {
   static const fruits = 'assets/images/fruits.png';
   static const camera = 'assets/images/camera.png';
   static const mic = 'assets/images/microphone.png';
+}
+class AppColor {
+  static const primaryColor = Color(0xFF00c97b);
 }
