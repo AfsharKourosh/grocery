@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grocery/core/storage/app_storage.dart';
 import 'package:grocery/core/utils/app_constants.dart';
-import 'package:grocery/feature/login/login_screen.dart';
+import 'package:grocery/feature/login/presentation/screen/login_screen.dart';
 import 'package:grocery/feature/onBoarding/presentation/screens/onboarding_screen.dart';
 import 'package:grocery/feature/permission/presentation/screens/camera_permission_screen.dart';
 import 'package:grocery/feature/permission/presentation/screens/microphone_permission_screen.dart';

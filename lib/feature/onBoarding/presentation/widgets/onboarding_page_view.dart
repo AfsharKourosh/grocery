@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:grocery/core/utils/app_constants.dart';
-import 'package:grocery/feature/onBoarding/presentation/pages/onboarding_page1.dart';
-import 'package:grocery/feature/onBoarding/presentation/pages/onboarding_page2.dart';
-import 'package:grocery/feature/onBoarding/presentation/pages/onboarding_page3.dart';
+import 'package:grocery/feature/onBoarding/presentation/widgets/pages/onboarding_page1.dart';
+import 'package:grocery/feature/onBoarding/presentation/widgets/pages/onboarding_page2.dart';
+import 'package:grocery/feature/onBoarding/presentation/widgets/pages/onboarding_page3.dart';
 
 class OnboardingPageView extends StatefulWidget {
   final PageController pageController;

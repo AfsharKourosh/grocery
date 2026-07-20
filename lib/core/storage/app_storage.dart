@@ -26,6 +26,7 @@ class AppStorage {
   static bool get onboardingDone => _box.read<bool>(_onboardingSeen) ?? false;
 
   static void setOnboardingDone() => _box.write(_onboardingSeen, true);
+
 //clear
   static void clearAll() => _box.erase();
 }

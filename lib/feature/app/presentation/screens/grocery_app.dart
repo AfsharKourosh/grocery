@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:grocery/feature/permission/presentation/bloc-cubit/cubit/permission_cubit.dart';
 import 'package:grocery/feature/splash/presentation/screen/splash_screen.dart';
 
 class GroceryApp extends StatelessWidget {
@@ -6,10 +8,13 @@ class GroceryApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      // theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      home: SplashScreen(),
+    return BlocProvider(
+      create: (context) => PermissionCubit(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        // theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
+        home: SplashScreen(),
+      ),
     );
   }
 }
