@@ -8,8 +8,6 @@ sealed class CameraPermissionStatus extends Equatable {
 
 final class CameraPermissionInitial extends CameraPermissionStatus {}
 
-final class CameraPermissionLoading extends CameraPermissionStatus {}
-
 final class CameraPermissionGranted extends CameraPermissionStatus {}
 
 final class CameraPermissionDenied extends CameraPermissionStatus {}
