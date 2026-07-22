@@ -17,20 +17,21 @@ class PermissionCubit extends Cubit<PermissionState> {
       );
 
   Future<void> requestCameraPermission() async {
-    final currentStatus = Permission.camera;
+    final currentStatus = await Permission.camera.status;
+    final requestPermission = await Permission.camera.request();
 
-    if (await currentStatus.status.isGranted) {
+    if (currentStatus.isGranted) {
       AppStorage.cameraGranted;
 
       emit(state.copyWith(newCameraPermissionStaus: CameraPermissionGranted()));
       return;
     }
 
-    if (await currentStatus.request().isGranted) {
+    if (requestPermission.isGranted) {
       AppStorage.setCameraGranted();
 
       emit(state.copyWith(newCameraPermissionStaus: CameraPermissionGranted()));
-    } else if (await currentStatus.request().isPermanentlyDenied) {
+    } else if (requestPermission.isPermanentlyDenied) {
       emit(
         state.copyWith(
           newCameraPermissionStaus: CameraPermissionPermanentlyDenied(),
@@ -42,8 +43,9 @@ class PermissionCubit extends Cubit<PermissionState> {
   }
 
   Future<void> requestMicrophonePermission() async {
-    final current = Permission.microphone;
-    if (await current.status.isGranted) {
+    final currentStatus = await Permission.microphone.status;
+    final requestPermission = await Permission.microphone.request();
+    if (currentStatus.isGranted) {
       AppStorage.microphoneGranted;
       emit(
         state.copyWith(
@@ -52,14 +54,14 @@ class PermissionCubit extends Cubit<PermissionState> {
       );
       return;
     }
-    if (await current.request().isGranted) {
+    if (requestPermission.isGranted) {
       AppStorage.setMicrophoneGranted();
       emit(
         state.copyWith(
           newMicrophonePermissionStaus: MicrophonePermissionGranted(),
         ),
       );
-    } else if (await current.request().isPermanentlyDenied) {
+    } else if (requestPermission.isPermanentlyDenied) {
       emit(
         state.copyWith(
           newMicrophonePermissionStaus: MicrophonePermissionPermanentlyDenied(),
