@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery/config/theme/app_colors.dart';
 import 'package:grocery/core/storage/app_storage.dart';
 import 'package:grocery/core/utils/app_constants.dart';
 import 'package:grocery/feature/login/presentation/screen/login_screen.dart';
@@ -46,7 +47,7 @@ class _SplashScreenState extends State<SplashScreen> {
       // Both granted → go to onboarding
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (_) => MyWidget()),
+        MaterialPageRoute(builder: (_) => LoginScreen()),
       );
     }
   }

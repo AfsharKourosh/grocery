@@ -58,7 +58,7 @@ class OnboardingBottom extends StatelessWidget {
                       // last page → navigate
                       Navigator.pushReplacement(
                         context,
-                        MaterialPageRoute(builder: (_) => MyWidget()),
+                        MaterialPageRoute(builder: (_) => LoginScreen()),
                       );
                     }
                   },

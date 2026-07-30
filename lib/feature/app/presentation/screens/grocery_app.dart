@@ -9,6 +9,12 @@ class GroceryApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
+      // theme: AppTheme.light,
+      // darkTheme: AppTheme.dark,
+      // themeMode: context.watch<ThemeCubit>().state,
+      // locale: ,title: ,routes: ,onGenerateRoute: ,
+      //onUnknownRoute: ,onGenerateInitialRoutes: ,
+      //localizationsDelegates: ,initialRoute: ,
       home: SplashScreen(),
     );
   }
