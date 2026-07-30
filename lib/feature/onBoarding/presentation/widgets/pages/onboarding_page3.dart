@@ -9,8 +9,8 @@ class OnboardingPage3 extends StatelessWidget {
     return Column(
       children: [
         Expanded(child: Image.asset(AppImages.dirinks)),
-        Text('Title 1'),
-        Text('Description 1'),
+        Text('Title 3'),
+        Text('Description 3'),
       ],
     );
   }

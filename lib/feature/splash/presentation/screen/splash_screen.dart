@@ -36,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
         context,
         MaterialPageRoute(builder: (_) => const MicrophonePermissionScreen()),
       );
-    } else if (!AppStorage.onboardingDone) {
+    } else if (!AppStorage.onboardingSeen) {
       // permissions done → onboarding
       Navigator.pushReplacement(
         context,

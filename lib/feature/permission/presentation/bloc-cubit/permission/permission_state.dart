@@ -9,14 +9,14 @@ class PermissionState extends Equatable {
   });
 
   PermissionState copyWith({
-    CameraPermissionStatus? newCameraPermissionStaus,
-    MicrophonePermissionStatus? newMicrophonePermissionStaus,
+    CameraPermissionStatus? cameraPermissionStatus,
+    MicrophonePermissionStatus? microphonePermissionStatus,
   }) {
     return PermissionState(
       cameraPermissionStatus:
-          newCameraPermissionStaus ?? cameraPermissionStatus,
+          cameraPermissionStatus ?? this.cameraPermissionStatus,
       microphonePermissionStatus:
-          newMicrophonePermissionStaus ?? microphonePermissionStatus,
+          microphonePermissionStatus ?? this.microphonePermissionStatus,
     );
   }
 

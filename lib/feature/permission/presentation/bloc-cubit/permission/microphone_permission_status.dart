@@ -12,5 +12,3 @@ final class MicrophonePermissionGranted extends MicrophonePermissionStatus {}
 
 final class MicrophonePermissionDenied extends MicrophonePermissionStatus {}
 
-final class MicrophonePermissionPermanentlyDenied
-    extends MicrophonePermissionStatus {}

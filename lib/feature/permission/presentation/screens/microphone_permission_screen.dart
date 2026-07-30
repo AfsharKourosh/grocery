@@ -28,9 +28,7 @@ class MicrophonePermissionScreen extends StatelessWidget {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(content: Text('Microphone permission is required!')),
           );
-        }
-        if (state.microphonePermissionStatus
-            is MicrophonePermissionPermanentlyDenied) {
+          await Future.delayed(const Duration(seconds: 1));
           await openAppSettings();
         }
       },
@@ -46,13 +44,13 @@ class MicrophonePermissionScreen extends StatelessWidget {
               Image.asset(AppImages.mic, height: 100.0),
               ElevatedButton(
                 onPressed: () {
-                  context.read<PermissionCubit>().requestCameraPermission();
+                  context.read<PermissionCubit>().requestMicrophonePermission();
                 },
                 child: Text('yes'),
               ),
               ElevatedButton(
                 onPressed: () {
-                  openAppSettings();
+                  context.read<PermissionCubit>().requestMicrophonePermission();
                 },
                 child: Text('no'),
               ),

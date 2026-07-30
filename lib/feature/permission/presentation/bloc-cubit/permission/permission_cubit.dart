@@ -23,22 +23,16 @@ class PermissionCubit extends Cubit<PermissionState> {
     if (currentStatus.isGranted) {
       AppStorage.cameraGranted;
 
-      emit(state.copyWith(newCameraPermissionStaus: CameraPermissionGranted()));
+      emit(state.copyWith(cameraPermissionStatus: CameraPermissionGranted()));
       return;
     }
 
     if (requestPermission.isGranted) {
       AppStorage.setCameraGranted();
 
-      emit(state.copyWith(newCameraPermissionStaus: CameraPermissionGranted()));
-    } else if (requestPermission.isPermanentlyDenied) {
-      emit(
-        state.copyWith(
-          newCameraPermissionStaus: CameraPermissionPermanentlyDenied(),
-        ),
-      );
+      emit(state.copyWith(cameraPermissionStatus: CameraPermissionGranted()));
     } else {
-      emit(state.copyWith(newCameraPermissionStaus: CameraPermissionDenied()));
+      emit(state.copyWith(cameraPermissionStatus: CameraPermissionDenied()));
     }
   }
 
@@ -49,7 +43,7 @@ class PermissionCubit extends Cubit<PermissionState> {
       AppStorage.microphoneGranted;
       emit(
         state.copyWith(
-          newMicrophonePermissionStaus: MicrophonePermissionGranted(),
+          microphonePermissionStatus: MicrophonePermissionGranted(),
         ),
       );
       return;
@@ -58,19 +52,13 @@ class PermissionCubit extends Cubit<PermissionState> {
       AppStorage.setMicrophoneGranted();
       emit(
         state.copyWith(
-          newMicrophonePermissionStaus: MicrophonePermissionGranted(),
-        ),
-      );
-    } else if (requestPermission.isPermanentlyDenied) {
-      emit(
-        state.copyWith(
-          newMicrophonePermissionStaus: MicrophonePermissionPermanentlyDenied(),
+          microphonePermissionStatus: MicrophonePermissionGranted(),
         ),
       );
     } else {
       emit(
         state.copyWith(
-          newMicrophonePermissionStaus: MicrophonePermissionDenied(),
+          microphonePermissionStatus: MicrophonePermissionDenied(),
         ),
       );
     }

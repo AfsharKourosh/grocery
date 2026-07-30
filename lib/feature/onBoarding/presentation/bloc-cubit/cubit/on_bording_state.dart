@@ -1,6 +1,13 @@
 part of 'on_bording_cubit.dart';
 
-@immutable
-sealed class OnBordingState {}
+class OnBordingState extends Equatable {
+  final int currentIndex;
+  const OnBordingState({this.currentIndex = 0});
 
-final class OnBordingInitial extends OnBordingState {}
+  OnBordingState copyWith({int? currentIndex}) {
+    return OnBordingState(currentIndex: currentIndex ?? this.currentIndex);
+  }
+
+  @override
+  List<Object?> get props => [currentIndex];
+}

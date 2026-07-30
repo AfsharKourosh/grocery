@@ -12,4 +12,3 @@ final class CameraPermissionGranted extends CameraPermissionStatus {}
 
 final class CameraPermissionDenied extends CameraPermissionStatus {}
 
-final class CameraPermissionPermanentlyDenied extends CameraPermissionStatus {}

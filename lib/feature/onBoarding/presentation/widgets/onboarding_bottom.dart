@@ -54,7 +54,7 @@ class OnboardingBottom extends StatelessWidget {
                         curve: Curves.easeInOut,
                       );
                     } else {
-                      AppStorage.setOnboardingDone();
+                      AppStorage.setOnboardingSeen();
                       // last page → navigate
                       Navigator.pushReplacement(
                         context,

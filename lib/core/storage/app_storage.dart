@@ -23,9 +23,9 @@ class AppStorage {
       _box.write(_microphonePermissionAllowed, true);
 
 //onboarding
-  static bool get onboardingDone => _box.read<bool>(_onboardingSeen) ?? false;
+  static bool get onboardingSeen => _box.read<bool>(_onboardingSeen) ?? false;
 
-  static void setOnboardingDone() => _box.write(_onboardingSeen, true);
+  static void setOnboardingSeen() => _box.write(_onboardingSeen, true);
 
 //clear
   static void clearAll() => _box.erase();

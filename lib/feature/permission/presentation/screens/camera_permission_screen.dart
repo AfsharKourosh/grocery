@@ -32,9 +32,7 @@ class CameraPermissionScreen extends StatelessWidget {
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(content: Text('Camera permission is required!')),
           );
-        }
-
-        if (state.cameraPermissionStatus is CameraPermissionPermanentlyDenied) {
+          await Future.delayed(const Duration(seconds: 1));
           await openAppSettings();
         }
       },
@@ -56,7 +54,7 @@ class CameraPermissionScreen extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
-                  openAppSettings();
+                  context.read<PermissionCubit>().requestCameraPermission();
                 },
                 child: Text('no'),
               ),
