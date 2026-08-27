@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:grocery/core/utils/app_constants.dart';
+import 'package:grocery/core/utils/app_assets.dart';
 
 class OnboardingPage2 extends StatelessWidget {
   const OnboardingPage2({super.key});
@@ -8,7 +8,7 @@ class OnboardingPage2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Expanded(child: Image.asset(AppImages.fruits)),
+        Expanded(child: Image.asset(AppImagesAsset.fruits)),
         Text('Title 2'),
         Text('Description 2'),
       ],

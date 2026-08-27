@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:grocery/config/theme/app_colors.dart';
-import 'package:grocery/core/utils/app_constants.dart';
+import 'package:grocery/core/utils/app_assets.dart';
 import 'package:grocery/feature/onBoarding/presentation/screens/onboarding_screen.dart';
 import 'package:grocery/feature/permission/presentation/bloc-cubit/permission/microphone_permission_status.dart';
 import 'package:grocery/feature/permission/presentation/bloc-cubit/permission/permission_cubit.dart';
@@ -42,7 +42,7 @@ class MicrophonePermissionScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset(AppImages.mic, height: 100.0),
+              Image.asset(AppImagesAsset.mic, height: 100.0),
               ElevatedButton(
                 onPressed: () {
                   context.read<PermissionCubit>().requestMicrophonePermission();

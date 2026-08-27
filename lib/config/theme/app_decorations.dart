@@ -29,7 +29,7 @@ class AppDecorations extends ThemeExtension<AppDecorations> {
 
 
 class AppDecorations2 {
-  AppDecorations2._(); // جلوگیری از ساخت instance
+  AppDecorations2._(); //didn't create instance
 
   static final BoxDecoration  card = BoxDecoration(
     color: Colors.white,
