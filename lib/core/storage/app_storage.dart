@@ -30,3 +30,9 @@ class AppStorage {
 //clear
   static void clearAll() => _box.erase();
 }
+/*
+SharedPreferences
+SecureStorage
+LocalStorage
+Cache
+*/

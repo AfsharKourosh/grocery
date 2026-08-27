@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grocery/config/theme/app_colors.dart';
 import 'package:grocery/core/storage/app_storage.dart';
-import 'package:grocery/core/utils/app_assets.dart';
+import 'package:grocery/core/assets/app_assets.dart';
 import 'package:grocery/feature/login/presentation/screen/login_screen.dart';
 import 'package:grocery/feature/onBoarding/presentation/screens/onboarding_screen.dart';
 import 'package:grocery/feature/permission/presentation/screens/camera_permission_screen.dart';

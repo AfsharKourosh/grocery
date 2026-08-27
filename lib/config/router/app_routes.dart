@@ -7,3 +7,10 @@ abstract final class AppRoutes {
   static const home = '/home';
   static const profile = '/profile';
 }
+/*
+
+
+config = تنظیمات و composition مخصوص خود App
+core   = قابلیت‌های reusable و مستقل از business
+feature = business/domain مربوط به یک feature
+*/

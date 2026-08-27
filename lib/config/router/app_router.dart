@@ -1,3 +1,4 @@
+/*
 import 'package:flutter/material.dart';
 import 'package:grocery/core/router/app_routes.dart';
 import 'package:grocery/feature/login/presentation/screen/login_screen.dart';
@@ -30,3 +31,20 @@ class AppRouter {
     );
   }
 }
+//GoRoute
+class AppRoutes {
+  GoRouter getRouter() => _router;
+
+  final GoRouter _router = GoRouter(
+    routes: <RouteBase>[
+      GoRoute(
+        path: '/',
+        name: RoutesName.splashPage,
+        builder: (BuildContext context, GoRouterState state) {
+          return const SplashPage();
+        },
+      ),
+         ],
+  );
+}
+*/

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:grocery/config/theme/app_colors.dart';
-import 'package:grocery/core/utils/app_assets.dart';
+import 'package:grocery/core/assets/app_assets.dart';
 import 'package:grocery/feature/permission/presentation/bloc-cubit/permission/camera_permission_status.dart';
 import 'package:grocery/feature/permission/presentation/bloc-cubit/permission/permission_cubit.dart';
 import 'package:grocery/feature/permission/presentation/screens/microphone_permission_screen.dart';
