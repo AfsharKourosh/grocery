@@ -6,6 +6,7 @@ import 'package:grocery/feature/login/presentation/screen/login_screen.dart';
 import 'package:grocery/feature/onBoarding/presentation/screens/onboarding_screen.dart';
 import 'package:grocery/feature/permission/presentation/screens/camera_permission_screen.dart';
 import 'package:grocery/feature/permission/presentation/screens/microphone_permission_screen.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -19,6 +20,13 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     _navigate();
+  }
+
+  Future<String> getAppVersion() async {
+    String appVersion = '';
+    PackageInfo packageInfo = await PackageInfo.fromPlatform();
+    appVersion = packageInfo.version;
+    return appVersion;
   }
 
   Future<void> _navigate() async {
@@ -58,7 +66,14 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: AppColor.primaryColor,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [Center(child: Image.asset(AppImages.logo))],
+        children: [
+          Center(child: Image.asset(AppImages.logo)),
+
+          FutureBuilder<String>(
+            future: getAppVersion(),
+            builder: (context, version) => Text('ورژن ${version.data ?? ''}'),
+          ),
+        ],
       ),
     );
   }
