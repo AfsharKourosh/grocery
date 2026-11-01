@@ -1,6 +1,6 @@
 
-class AppImages {
-  AppImages._();
+class AppImagesAsset {
+  AppImagesAsset._();
   static const logo = 'assets/images/logo.png';
   static const details = 'assets/images/details.png';
   static const dirinks = 'assets/images/dirinks.png';
